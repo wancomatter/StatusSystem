@@ -20,7 +20,7 @@
 
 # ビューワー適用 =============================================================================================
 # アイテム消す
-    clear @s *[custom_data~{StatusViewer:1b}]
+    clear @s *[custom_data~{SampleStatusViewer:1b}]
 
 # ステータス表示アイテムをcontainer.35にぶちこむ
     loot replace entity @s container.35 loot status_system:sample_viewer
