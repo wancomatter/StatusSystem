@@ -1,5 +1,3 @@
-# プレイヤーでないなら実行しない
-    execute unless entity @s[type=player] run return fail
 # とりあえずステータスデータはOhMyDat内なのでplease
     function #oh_my_dat:please
 # ステータスのみ取り出す

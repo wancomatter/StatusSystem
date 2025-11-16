@@ -2,6 +2,8 @@
 # プレイヤーの基礎ステータスを設定する関数
 # ついでにステータス反映もされる
 
+# OhMyDat呼び出し
+    function #oh_my_dat:please
 
 # Argumentの値から属性を判別し、ストレージをコピー
     function status_system:core/input_macro with storage status_system: Argument

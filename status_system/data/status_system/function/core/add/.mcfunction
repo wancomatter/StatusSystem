@@ -25,9 +25,9 @@
     # 名前
         data modify storage status_system: Temporary2.Name set from storage status_system: Argument.Name
     # 加算or乗算or別枠乗算
-        execute if data storage status_system: Argument{isMultiply:1b} run data modify storage status_system: Temporary2.operation.multiply_base set value 1b
-        execute if data storage status_system: Argument{isMultiply:2b} run data modify storage status_system: Temporary2.operation.multiply_total set value 1b
-        execute unless data storage status_system: Argument{isMultiply:1b} unless data storage status_system: Argument{isMultiply:2b} run data modify storage status_system: Temporary2.operation.addition set value 1b
+        execute if data storage status_system: Argument{AddOption:"add_multiplied_base"} run data modify storage status_system: Temporary2.operation.multiply_base set value 1b
+        execute if data storage status_system: Argument{AddOption:"add_multiplied_total"} run data modify storage status_system: Temporary2.operation.multiply_total set value 1b
+        execute unless data storage status_system: Argument{AddOption:"add_multiplied_base"} unless data storage status_system: Argument{AddOption:"add_multiplied_total"} run data modify storage status_system: Temporary2.operation.addition set value 1b
     # 継続時間ありの場合：グローバルタイマー利用で継続時間を取得する
         execute if data storage status_system: Argument.Duration store result score #Status.TimeCalc.tmp StatusSystem run data get storage status_system: Argument.Duration 1
         execute if data storage status_system: Argument.Duration store result storage status_system: Temporary2.Time int 1 run scoreboard players operation #Status.TimeCalc.tmp StatusSystem += #global StatusSystem
