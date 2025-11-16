@@ -27,6 +27,17 @@
                   {"text":"ノックバック耐性"},
                   {"nbt":"_.StatusViewer.KnockbackResistance","interpret":true,"storage":"status_viewer:sample"},
                   {"text":"%","font":"uniform"}
+                ]},
+                {"translate": "%s %s","italic": false,"color": "white","with":[
+                  {"text":"最大MP"},
+                  {"nbt":"_.StatusViewer.MPMax","interpret":true,"storage":"status_viewer:sample"}
+                ]},
+                {"translate": "%s %s%s  %s %s","italic": false,"color": "white","with":[
+                  {"text":"自然回復速度"},
+                  {"nbt":"_.StatusViewer.MPRegenSpeed","interpret":true,"storage":"status_viewer:sample"},
+                  {"text":"%","font":"uniform"},
+                  {"text":"自然回復量"},
+                  {"nbt":"_.StatusViewer.MPRegenAmount","interpret":true,"storage":"status_viewer:sample"}
                 ]}
               ],
               "entity": "this",

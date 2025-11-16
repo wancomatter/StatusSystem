@@ -16,6 +16,15 @@
     # ノックバック耐性
         function status_system:sample/viewer/set_color/normal with storage status_viewer:sample _.KnockbackResistance
         data modify storage status_viewer:sample _.StatusViewer.KnockbackResistance set from storage status_viewer:sample _.Out
+    # 最大MP
+        function status_system:sample/viewer/set_color/normal with storage status_viewer:sample _.MPMax
+        data modify storage status_viewer:sample _.StatusViewer.MPMax set from storage status_viewer:sample _.Out
+    # MP自然回復速度
+        function status_system:sample/viewer/set_color/normal with storage status_viewer:sample _.MPRegenSpeed
+        data modify storage status_viewer:sample _.StatusViewer.MPRegenSpeed set from storage status_viewer:sample _.Out
+    # MP自然回復量
+        function status_system:sample/viewer/set_color/normal with storage status_viewer:sample _.MPRegenAmount
+        data modify storage status_viewer:sample _.StatusViewer.MPRegenAmount set from storage status_viewer:sample _.Out
 
 
 # ビューワー適用 =============================================================================================
