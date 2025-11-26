@@ -9,15 +9,8 @@
 # Argumentの値から属性を判別し、ストレージをコピー
     function status_system:core/input_macro with storage status_system: Argument
 
-# 名前重複を削除
-    # 下準備としてストレージをコピーして削除
-        data modify storage status_system: Temporary2 set from storage status_system: Temporary
-        data remove storage status_system: Temporary.Modifier
-    # ループ関数を実行する
-        scoreboard players set #Status.NameDelete.MinDuration StatusSystem -2147483648
-        execute if data storage status_system: Temporary2.Modifier[0] run function status_system:core/name_delete/loop
-    # 一旦ストレージをリセット
-        data remove storage status_system: Temporary2
+# 名前重複を削除する場合、派生処理
+    execute unless data storage status_system: Argument{EnableDuplicateName:true} run function status_system:core/add/disable_duplicate_name
 
 # ArgumentのDurationとグローバルCDを利用して名前、効果量、継続時間を設定する
     # 効果量
@@ -32,7 +25,7 @@
         execute if data storage status_system: Argument.Duration store result score #Status.TimeCalc.tmp StatusSystem run data get storage status_system: Argument.Duration 1
         execute if data storage status_system: Argument.Duration store result storage status_system: Temporary2.Time int 1 run scoreboard players operation #Status.TimeCalc.tmp StatusSystem += #global StatusSystem
         # 名前重複があるなら継続時間の長い方に合わせる
-            execute if data storage status_system: Argument.Duration if score #Status.NameDelete.MinDuration StatusSystem > #Status.TimeCalc.tmp StatusSystem store result storage status_system: Temporary2.Time int 1 run scoreboard players get #Status.NameDelete.MinDuration StatusSystem
+            execute unless data storage status_system: Argument{EnableDuplicateName:true} if data storage status_system: Argument.Duration if score #Status.NameDelete.MinDuration StatusSystem > #Status.TimeCalc.tmp StatusSystem store result storage status_system: Temporary2.Time int 1 run scoreboard players get #Status.NameDelete.MinDuration StatusSystem
         # いずでばふいちびー？
             execute if data storage status_system: Argument.Duration if data storage status_system: Argument{isDebuff:1b} unless data storage status_system: Argument{NoDebuffTag:1b} run data modify storage status_system: Temporary2.isDebuff set value 1b
     # 継続時間なし
