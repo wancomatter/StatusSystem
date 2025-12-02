@@ -2,7 +2,7 @@
     attribute @s knockback_resistance modifier remove status_system
 
 # マクロ用ストレージ設定
-    data modify storage status_system: attribute set value {Name:"knockback_resistance",Amount:0,Mode:"add_value"}
+    data modify storage status_system: attribute set value {Attribute:"knockback_resistance",id:"knockback_resistance",Amount:0,Mode:"add_value"}
 # スコアから今回設定する値を準備
     execute store result storage status_system: attribute.Amount double 0.01 run scoreboard players get #Status.TotalCalc.Amount StatusSystem
 

@@ -1,2 +1,2 @@
 # マクロでAttributeを設定
-    $attribute @s $(Name) modifier add status_system $(Amount) $(Mode)
+    $attribute @s $(Attribute) modifier add $(id) $(Amount) $(Mode)
