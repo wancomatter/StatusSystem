@@ -1,4 +1,4 @@
 {
-    "values": ["status_system:core/entitytick/","status_system:sample/entitytick"],
+    "values": ["status_system:core/entitytick/"],
     "replace": false
 }

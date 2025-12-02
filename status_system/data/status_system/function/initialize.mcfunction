@@ -6,12 +6,6 @@
 # グローバルタイマーを0にする
     scoreboard players set #global StatusSystem 0
 
-# サンプルステータス用のスコアオブジェクトを作成
-    scoreboard objectives add SampleStatus.MP.Value dummy
-    scoreboard objectives add SampleStatus.MP.Max dummy
-    scoreboard objectives add SampleStatus.MP.RegenCount dummy
-    scoreboard objectives add SampleStatus.MP.RegenSpeed dummy
-
 # 定数スコアオブジェクト作成と#global適用
     scoreboard objectives add 100 dummy
     scoreboard players set #global 100 100

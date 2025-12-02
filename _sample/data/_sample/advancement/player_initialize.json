@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "root": {
+      "trigger": "tick"
+    }
+  },
+  "rewards": {
+    "function": "_sample:player_initialize"
+  }
+}
