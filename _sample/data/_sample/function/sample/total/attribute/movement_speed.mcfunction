@@ -1,5 +1,5 @@
 # 既に付与されているAttributeは削除
-    attribute @s movement_speed modifier remove status_system
+    attribute @s movement_speed modifier remove speed
 
 # マクロ用ストレージ設定
     data modify storage status_system: attribute set value {Attribute:"movement_speed",id:"speed",Amount:0,Mode:"add_multiplied_total"}

@@ -1,5 +1,5 @@
 # 既に付与されているAttributeは削除
-    attribute @s knockback_resistance modifier remove status_system
+    attribute @s knockback_resistance modifier remove knockback_resistance
 
 # マクロ用ストレージ設定
     data modify storage status_system: attribute set value {Attribute:"knockback_resistance",id:"knockback_resistance",Amount:0,Mode:"add_value"}

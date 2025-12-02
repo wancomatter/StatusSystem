@@ -1,6 +1,6 @@
 # 既に付与されているAttributeは削除
     attribute @s step_height base set 0
-    attribute @s step_height modifier remove status_system
+    attribute @s step_height modifier remove step_height
 
 # マクロ用ストレージ設定
     data modify storage status_system: attribute set value {Attribute:"step_height",id:"step_height",Amount:0,Mode:"add_value"}
