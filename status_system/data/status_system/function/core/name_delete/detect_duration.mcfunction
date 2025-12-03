@@ -5,5 +5,5 @@
 #   function status_system:core/name_delete/loop
 
 #tellraw @a {"nbt":"Temporary2.Modifier[0]","storage":"mby:status"}
-execute store result score #Status.NameDelete.GetDuration StatusSystem run data get storage status_system: Temporary2.Modifier[0].Time
+execute store result score #Status.NameDelete.GetDuration StatusSystem run data get storage status_system: Temporary2.Modifier[-1].Time
 scoreboard players operation #Status.NameDelete.MinDuration StatusSystem > #Status.NameDelete.GetDuration StatusSystem
