@@ -1,9 +1,6 @@
 #> status_system:core/name_delete/
 #
 # ステータスを名前指定で削除する関数
-# data merge storage status_system: {Argument:{Id:1b,Name:"antelope_paradise"}}
-#
-# @public
 
 # OhMyDat呼び出し
     function #oh_my_dat:please
